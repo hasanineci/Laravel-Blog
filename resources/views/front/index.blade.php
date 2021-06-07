@@ -10,7 +10,7 @@
     <meta name="robots" content="index" />
     <meta name="googlebot" content="index" />
 
-    <title>@yield('title') - Blog Sayfam</title>
+    <title>@yield('title') Blog Sayfam</title>
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->

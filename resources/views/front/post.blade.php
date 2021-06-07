@@ -1,5 +1,5 @@
 @extends('front.index')
-@section('title')Gönderiler @endsection
+@section('title')Gönderiler - @endsection
 
 @section('content')
 

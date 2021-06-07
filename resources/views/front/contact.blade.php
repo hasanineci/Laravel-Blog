@@ -1,5 +1,5 @@
 @extends('front.index')
-@section('title')İletişim @endsection
+@section('title')İletişim - @endsection
 
 @section('content')
 
