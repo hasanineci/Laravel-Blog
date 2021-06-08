@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\admin\AdminIndexController;
+use App\Http\Controllers\admin\NewPostController;
+use App\Http\Controllers\admin\PostCategoriesController;
 use App\Http\Controllers\front\AboutController;
 use App\Http\Controllers\front\ContactController;
 use App\Http\Controllers\front\IndexController;
@@ -18,8 +20,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
 /**
  * Front Routes
  */
@@ -30,9 +30,10 @@ Route::get('iletisim', [ContactController::class, 'contact_Get']);
 Route::get('blog', [PostController::class, 'post_Get']);
 
 
-
 /**
  * Admin Routes
  */
 
 Route::get('/admin', [AdminIndexController::class, 'index']);
+Route::get('new-post', [NewPostController::class, 'new_post_Get']);
+Route::get('posts', [PostCategoriesController::class, 'postCategories_Get']);
