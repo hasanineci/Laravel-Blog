@@ -9,6 +9,6 @@ class PostCategoriesController extends Controller
 {
     public function postCategories_Get()
     {
-        return view('admin.posts');
+        return view('admin.blog-post.posts');
     }
 }

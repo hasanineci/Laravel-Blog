@@ -5,10 +5,10 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class NewPostController extends Controller
+class ProfilController extends Controller
 {
-    public function new_post_Get()
+    public function profil_Get()
     {
-        return view('admin.blog-post.new-post');
+        return view('admin.profils.profil');
     }
 }
