@@ -33,9 +33,9 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+                    <div class="col-md-12 col-12 order-2 order-md-1">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-md-12 col-12">
                                 <div class="post">
                                     <div class="user-block">
                                         <img class="img-circle img-bordered-sm" src="{{ asset('dist/img/user.jpg') }}"
@@ -64,7 +64,7 @@
                                             <i class="fas fa-exclamation-triangle"></i>
                                             Pasif Et
                                         </a>
-                                        <a class="btn btn-info btn-sm" href="#">
+                                        <a class="btn btn-success btn-sm" href="#">
                                             <i class="fas fa-pencil-alt"></i>
                                             Düzenle
                                         </a>
@@ -75,7 +75,7 @@
                                     </p>
                                 </div>
                                 <!--col end -->
-                                <div class="col-12">
+                                <div class="col-md-12 col-12">
                                     <div class="post">
                                         <div class="user-block">
                                             <img class="img-circle img-bordered-sm"
@@ -101,7 +101,7 @@
                                                 <i class="fas fa-exclamation-triangle"></i>
                                                 Pasif Et
                                             </a>
-                                            <a class="btn btn-info btn-sm" href="#">
+                                            <a class="btn btn-success btn-sm" href="#">
                                                 <i class="fas fa-pencil-alt"></i>
                                                 Düzenle
                                             </a>
@@ -112,85 +112,86 @@
                                         </p>
                                     </div>
                                     <!--col end -->
-                                <div class="col-12">
-                                    <div class="post">
-                                        <div class="user-block">
-                                            <img class="img-circle img-bordered-sm"
-                                                src="{{ asset('dist/img/user.jpg') }}" alt="user image">
-                                            <span class="username">
-                                                <a href="#">Hasan İNECİ</a>
-                                            </span>
-                                            <span class="description">herkese Açık Olarak Paylaşıldı - 01.06.2021 /
-                                                13:45</span>
-                                        </div>
-                                        <p>
-                                            Lorem ipsum represents a long-held tradition for designers,
-                                            typographers and the like. Some people hate it and argue for
-                                            its demise, but others ignore.
-                                        </p>
+                                    <div class="col-md-12 col-12">
+                                        <div class="post">
+                                            <div class="user-block">
+                                                <img class="img-circle img-bordered-sm"
+                                                    src="{{ asset('dist/img/user.jpg') }}" alt="user image">
+                                                <span class="username">
+                                                    <a href="#">Hasan İNECİ</a>
+                                                </span>
+                                                <span class="description">herkese Açık Olarak Paylaşıldı - 01.06.2021 /
+                                                    13:45</span>
+                                            </div>
+                                            <p>
+                                                Lorem ipsum represents a long-held tradition for designers,
+                                                typographers and the like. Some people hate it and argue for
+                                                its demise, but others ignore.
+                                            </p>
 
-                                        <p>
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-folder-open"></i>
-                                                Gözat
-                                            </a>
-                                            <a class="btn btn-dark btn-sm" href="#">
-                                                <i class="fas fa-exclamation-triangle"></i>
-                                                Pasif Et
-                                            </a>
-                                            <a class="btn btn-info btn-sm" href="#">
-                                                <i class="fas fa-pencil-alt"></i>
-                                                Düzenle
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
-                                                <i class="fas fa-trash"></i>
-                                                Sil
-                                            </a>
-                                        </p>
-                                    </div>
-                                    <!--col end -->
-                                <div class="col-12">
-                                    <div class="post">
-                                        <div class="user-block">
-                                            <img class="img-circle img-bordered-sm"
-                                                src="{{ asset('dist/img/user.jpg') }}" alt="user image">
-                                            <span class="username">
-                                                <a href="#">Hasan İNECİ</a>
-                                            </span>
-                                            <span class="description">herkese Açık Olarak Paylaşıldı - 01.06.2021 /
-                                                13:45</span>
+                                            <p>
+                                                <a class="btn btn-primary btn-sm" href="#">
+                                                    <i class="fas fa-folder-open"></i>
+                                                    Gözat
+                                                </a>
+                                                <a class="btn btn-dark btn-sm" href="#">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                    Pasif Et
+                                                </a>
+                                                <a class="btn btn-success btn-sm" href="#">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                    Düzenle
+                                                </a>
+                                                <a class="btn btn-danger btn-sm" href="#">
+                                                    <i class="fas fa-trash"></i>
+                                                    Sil
+                                                </a>
+                                            </p>
                                         </div>
-                                        <p>
-                                            Lorem ipsum represents a long-held tradition for designers,
-                                            typographers and the like. Some people hate it and argue for
-                                            its demise, but others ignore.
-                                        </p>
+                                        <!--col end -->
+                                        <div class="col-md-12 col-12">
+                                            <div class="post">
+                                                <div class="user-block">
+                                                    <img class="img-circle img-bordered-sm"
+                                                        src="{{ asset('dist/img/user.jpg') }}" alt="user image">
+                                                    <span class="username">
+                                                        <a href="#">Hasan İNECİ</a>
+                                                    </span>
+                                                    <span class="description">herkese Açık Olarak Paylaşıldı -
+                                                        01.06.2021 /
+                                                        13:45</span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum represents a long-held tradition for designers,
+                                                    typographers and the like. Some people hate it and argue for
+                                                    its demise, but others ignore.
+                                                </p>
 
-                                        <p>
-                                            <a class="btn btn-primary btn-sm" href="#">
-                                                <i class="fas fa-folder-open"></i>
-                                                Gözat
-                                            </a>
-                                            <a class="btn btn-dark btn-sm" href="#">
-                                                <i class="fas fa-exclamation-triangle"></i>
-                                                Pasif Et
-                                            </a>
-                                            <a class="btn btn-info btn-sm" href="#">
-                                                <i class="fas fa-pencil-alt"></i>
-                                                Düzenle
-                                            </a>
-                                            <a class="btn btn-danger btn-sm" href="#">
-                                                <i class="fas fa-trash"></i>
-                                                Sil
-                                            </a>
-                                        </p>
+                                                <p>
+                                                    <a class="btn btn-primary btn-sm" href="#">
+                                                        <i class="fas fa-folder-open"></i>
+                                                        Gözat
+                                                    </a>
+                                                    <a class="btn btn-dark btn-sm" href="#">
+                                                        <i class="fas fa-exclamation-triangle"></i>
+                                                        Pasif Et
+                                                    </a>
+                                                    <a class="btn btn-success btn-sm" href="#">
+                                                        <i class="fas fa-pencil-alt"></i>
+                                                        Düzenle
+                                                    </a>
+                                                    <a class="btn btn-danger btn-sm" href="#">
+                                                        <i class="fas fa-trash"></i>
+                                                        Sil
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <!--col end -->
+                                        </div>
                                     </div>
-                                    <!--col end -->
                                 </div>
-                            </div>
-                        </div>
-                    </div><!-- /.card-body -->
-                </div><!-- /.card -->
+                            </div><!-- /.card-body -->
+                        </div><!-- /.card -->
     </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
 

@@ -1,0 +1,11 @@
+.buyukharf {
+    text-transform: uppercase;
+}
+
+.kucukHarf {
+    text-transform: lowercase;
+}
+
+.ilkHarfBuyuk {
+    text-transform: capitalize;
+}

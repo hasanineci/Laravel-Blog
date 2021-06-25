@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\AdminAboutController;
 use App\Http\Controllers\admin\AdminIndexController;
 use App\Http\Controllers\admin\BlogSettingsController;
 use App\Http\Controllers\admin\CategoryController;
@@ -47,3 +48,4 @@ Route::get('admin/kategoriler',[CategoryController::class, 'category_GET']);
 Route::get('admin/kullanicilar',[UsersController::class, 'users_GET']);
 Route::get('admin/blog-ayarlari',[BlogSettingsController::class, 'blog_settings_GET']);
 Route::get('admin/iletisim', [AdminContactController::class, 'contact_GET']);
+Route::get('admin/hakkimizda', [AdminAboutController::class, 'admin_about_GET']);

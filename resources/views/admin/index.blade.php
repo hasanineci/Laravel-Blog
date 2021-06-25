@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css') }}">
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ asset('plugins/style.css') }}">
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -186,7 +189,7 @@
             <a href="{{ url('admin')}}" class="brand-link">
                 <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="Blog Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Blog Sayfam</span>
+                <span class="brand-text font-weight-light ilkHarfBuyuk">blog sayfam</span>
             </a>
 
             <!-- Sidebar -->
@@ -197,7 +200,7 @@
                         <img src="{{ asset('dist/img/user.jpg') }}" class="img-circle elevation-2" alt="admin profil">
                     </div>
                     <div class="info">
-                        <a href="{{ url('admin/profil')}}" class="d-block">Hasan İNECİ</a>
+                        <a href="{{ url('admin/profil')}}" class="d-block buyukHarf">hasan ineci</a>
                     </div>
                 </div>
 
@@ -218,12 +221,11 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview"
                         role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="{{ url('admin/blog-ayarlari') }}" class="nav-link @yield('menu-blog-settings-active')">
-                                <i class="nav-icon fas fa-cog"></i>
+                            <a href="{{ url('admin/hakkimizda') }}" class="nav-link @yield('menu-about-active')">
+                                <i class="nav-icon fas fa-id-card"></i>
                                 <p>
-                                    Blog Ayarları
+                                    Hakkımızda
                                 </p>
                             </a>
                         </li>
@@ -232,6 +234,15 @@
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Kategoriler
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('admin/blog-ayarlari') }}"
+                                class="nav-link @yield('menu-blog-settings-active')">
+                                <i class="nav-icon fas fa-cog"></i>
+                                <p>
+                                    Blog Ayarları
                                 </p>
                             </a>
                         </li>
@@ -246,20 +257,14 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="{{ url('admin/new-post') }}" class="nav-link">
-                                        <i class="fas fa-circle nav-icon text-warning"></i>
+                                        <i class="far fa-circle nav-icon text-success"></i>
                                         <p>Yeni Post</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ url('admin/posts') }}" class="nav-link">
-                                        <i class="fas fa-circle nav-icon text-info"></i>
+                                        <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Postlar</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ url('admin/task') }}" class="nav-link">
-                                        <i class="fas fa-circle nav-icon text-danger"></i>
-                                        <p>Taslak</p>
                                     </a>
                                 </li>
                             </ul>
@@ -274,7 +279,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ url('admin/iletisim') }}" class="nav-link @yield('menu-contact-active')">
-                                <i class="nav-icon fas fa-id-card"></i>
+                                <i class="nav-icon fas fa-street-view"></i>
                                 <p>
                                     İletişim
                                 </p>

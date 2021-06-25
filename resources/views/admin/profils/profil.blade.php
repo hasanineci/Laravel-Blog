@@ -1,7 +1,5 @@
 @extends('admin.index')
 @section('title')Profil - @endsection
-@section('menu-posts') menu-open @endsection
-@section('menu-posts-active') active @endsection
 
 @section('content')
 
@@ -39,7 +37,7 @@
                         <div class="card-body box-profile">
                             <div class="text-center">
                                 <img class="profile-user-img img-fluid img-circle"
-                                    src="{{ asset('dist/img/user2-160x160.jpg') }}" alt="User profile picture">
+                                    src="{{ asset('dist/img/user.jpg') }}" alt="User profile picture">
                             </div>
 
                             <h3 class="profile-username text-center">Hasan İNECİ</h3>
