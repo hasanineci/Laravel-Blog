@@ -2,7 +2,7 @@
 <html lang="tr">
 
 <head>
-    <title>@yield('title') Admin</title>
+    <title>@yield('title') Admin Yönetim Paneli</title>
     <meta charset="utf-8">
     <meta name="author" content="softrede.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css') }}">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Style -->
     <link rel="stylesheet" href="{{ asset('plugins/style.css') }}">
 
@@ -174,6 +176,29 @@
                         <a href="#" class="dropdown-item dropdown-footer">Tümünü gör</a>
                     </div>
                 </li>
+                <li class="nav-item dropdown user-menu">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <img src="{{ asset('dist/img/user.jpg')}}" class="user-image img-circle elevation-2"
+                            alt="User Image">
+                        <span class="d-none d-md-inline" style="text-transform: capitalize;">Hasan İNECİ</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <!-- User image -->
+                        <li class="user-header bg-info">
+                            <img src="{{ asset('dist/img/user.jpg')}}" class="img-circle elevation-2" alt="User Image">
+
+                            <p style="text-transform: capitalize;">
+                                Hasan İNECİ - Bilgisayar Mühendisi
+                                <small>0541 514 85 15</small>
+                            </p>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <a href="{{ url('profil') }}" class="btn btn-default btn-flat">Profil</a>
+                            <a href="{{ url('') }}" class="btn btn-default btn-flat float-right">Oturumu Kapat</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                         <i class="fas fa-expand-arrows-alt"></i>
@@ -195,17 +220,9 @@
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="{{ asset('dist/img/user.jpg') }}" class="img-circle elevation-2" alt="admin profil">
-                    </div>
-                    <div class="info">
-                        <a href="{{ url('admin/profil')}}" class="d-block buyukHarf">hasan ineci</a>
-                    </div>
-                </div>
 
                 <!-- SidebarSearch Form -->
-                <div class="form-inline">
+                <div class="form-inline mt-3 d-flex">
                     <div class="input-group" data-widget="sidebar-search">
                         <input class="form-control form-control-sidebar" type="search" placeholder="Panel içinde ara..."
                             aria-label="Search">
@@ -282,6 +299,14 @@
                                 <i class="nav-icon fas fa-street-view"></i>
                                 <p>
                                     İletişim
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('') }}" class="nav-link">
+                                <i class="nav-icon fas fa-angle-double-right"></i>
+                                <p>
+                                    Siteye Git
                                 </p>
                             </a>
                         </li>

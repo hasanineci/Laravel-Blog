@@ -22,12 +22,14 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <h3>Biz kimiz</h3>
+
+                @foreach ($about as $item)
+
+                <h3>{{ $about->title }}</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur
-                    voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam
-                    ducimus consectetur?
+                    {{ $about->content }}
                 </p>
+                @endforeach
                 <h3>Misyonumuz</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque
@@ -46,4 +48,4 @@
 </main>
 
 
-    @endsection
+@endsection

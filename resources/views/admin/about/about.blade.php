@@ -26,27 +26,24 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 col-12">
-                    <div class="card card-warning">
+                    <div class="card card-primary collapsed-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Hakkımızda</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <form>
                                 <div class="row">
-                                    <div class="col-sm-6 col-12">
-                                        <div class="form-group">
-                                            <div class="form-group">
-                                                <label>Konu</label>
-                                                <select class="form-control">
-                                                    <option>Hakkımızda</option>
-                                                    <option>Misyonumuz</option>
-                                                    <option>Vizyonumuz</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="col-sm-12 col-12">
                                         <div class="form-group">
                                             <label>Konu içeriği</label>
-                                            <textarea name="site_description" class="form-control"
-                                                rows="10" placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cumque eius ipsam earum voluptatibus. Pariatur, corrupti possimus. Est reiciendis nostrum nobis at asperiores dolor, alias atque aspernatur similique animi voluptate.">
+                                            <textarea name="site_description" class="form-control" rows="10"
+                                                placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cumque eius ipsam earum voluptatibus. Pariatur, corrupti possimus. Est reiciendis nostrum nobis at asperiores dolor, alias atque aspernatur similique animi voluptate.">
                                             </textarea>
                                         </div>
                                     </div>
@@ -55,12 +52,67 @@
                             </form>
                         </div><!-- /.card-body -->
                     </div>
-                </div>
+                </div><!-- /.col-md-12 col-12 -->
+                <div class="col-md-12 col-12">
+                    <div class="card card-dark collapsed-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Misyonumuz</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-12 col-12">
+                                        <div class="form-group">
+                                            <label>Konu içeriği</label>
+                                            <textarea name="site_description" class="form-control" rows="10"
+                                                placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cumque eius ipsam earum voluptatibus. Pariatur, corrupti possimus. Est reiciendis nostrum nobis at asperiores dolor, alias atque aspernatur similique animi voluptate.">
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-save">Kaydet</button>
+                                </div>
+                            </form>
+                        </div><!-- /.card-body -->
+                    </div>
+                </div><!-- /.col-md-12 col-12 -->
+                <div class="col-md-12 col-12">
+                    <div class="card card-info collapsed-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Vizyonumuz</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-12 col-12">
+                                        <div class="form-group">
+                                            <label>Konu içeriği</label>
+                                            <textarea name="site_description" class="form-control" rows="10"
+                                                placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cumque eius ipsam earum voluptatibus. Pariatur, corrupti possimus. Est reiciendis nostrum nobis at asperiores dolor, alias atque aspernatur similique animi voluptate.">
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-save">Kaydet</button>
+                                </div>
+                            </form>
+                        </div><!-- /.card-body -->
+                    </div>
+                </div><!-- /.col-md-12 col-12 -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </section><!-- /.content -->
 </div>
-
 
 
 @endsection

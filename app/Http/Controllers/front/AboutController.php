@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\About;
 
 class AboutController extends Controller
 {
     public function about_Get()
     {
-        return view('front.about');
+        $about = About::get();
+        return view('front.about', compact('about'));
     }
 }

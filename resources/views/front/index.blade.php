@@ -42,6 +42,11 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url('hakkimizda') }}">Hakkımda</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url('blog') }}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url('iletisim') }}">İletişim</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url('admin') }}">
+                            <i class="fas fa-sign-in-alt fa-2x" style="margin-top: -3px;"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
