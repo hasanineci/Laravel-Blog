@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $posts = Posts::orderBy('created_at', 'DESC')->paginate(1);
+        $posts = Posts::orderBy('created_at', 'DESC')->where('status', 'active')->paginate(1);
         return view('front.homepage', compact('posts'));
     }
 }
