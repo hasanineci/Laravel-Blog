@@ -29,7 +29,41 @@
     <section class="content">
         <div class="row">
             <div class="col-md-12">
-                <div class="card card-outline card-info">
+                <div class="card card-outline card-success">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Başlık</label>
+                                    <input type="name" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Blog Başlık">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Resim Yükle</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                                            <label class="custom-file-label" for="exampleInputFile">Dosya formatı
+                                                jpg</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">Yükle</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label>Site Kısa Açıklama</label>
+                                    <textarea name="site_description" id="site_description" class="form-control"
+                                        rows="3" maxlength="60">
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <textarea class="form-control textarea_ckeditor @error('content') is-invalid @enderror"
@@ -37,7 +71,8 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-6 p-3">
-                            <button type="button" class="btn btn-block btn-success btn-lg" style="width: 100px;">Kaydet</button>
+                            <button type="button" class="btn btn-block btn-success btn-lg"
+                                style="width: 100px;">Kaydet</button>
                         </div>
                     </div>
                 </div>

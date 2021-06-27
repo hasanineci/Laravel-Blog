@@ -23,25 +23,13 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
 
-                @foreach ($about as $item)
+                @foreach ($about as $about)
 
                 <h3>{{ $about->title }}</h3>
                 <p>
                     {{ $about->content }}
                 </p>
                 @endforeach
-                <h3>Misyonumuz</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque
-                    architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum
-                    in officia voluptas voluptatibus, minus!
-                </p>
-                <h3>Vizyonumuz</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid
-                    ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit
-                    tempora!
-                </p>
             </div>
         </div>
     </div>

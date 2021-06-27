@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 
-<head>    
+<head>
     <meta charset="utf-8">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -38,20 +38,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url('') }}">Anasayfa</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url('hakkimizda') }}">Hakkımda</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url('blog') }}">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url('iletisim') }}">İletişim</a></li>
+                    @foreach ($kategori as $kategori)
                     <li class="nav-item">
-                        <a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url('admin') }}">
-                            <i class="fas fa-sign-in-alt fa-2x" style="margin-top: -3px;"></i>
-                        </a>
+                        <a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ $kategori->url }}">{{ $kategori->name }}</a>
                     </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
     </nav>
-    
+
     @yield('content')
 
 

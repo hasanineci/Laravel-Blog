@@ -25,94 +25,92 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12 col-12">
-                    <div class="card card-primary collapsed-card">
-                        <div class="card-header">
-                            <h3 class="card-title">Hakkımızda</h3>
-
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
+                <div class="col-12">
+                    <!-- Custom Tabs -->
+                    <div class="card">
+                        <div class="card-header d-flex p-0">
+                            <h3 class="card-title p-3">Hakkımızda</h3>
+                            <ul class="nav nav-pills ml-auto p-2">
+                                <li class="nav-item"><a class="nav-link active" href="#tab_1"
+                                        data-toggle="tab">Hakkımızda</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab">Misyonumuz</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#tab_3" data-toggle="tab">Vizyonumuz</a>
+                                </li>
+                            </ul>
+                        </div><!-- /.card-header -->
                         <div class="card-body">
-                            <form>
-                                <div class="row">
-                                    <div class="col-sm-12 col-12">
-                                        <div class="form-group">
-                                            <label>Konu içeriği</label>
-                                            <textarea name="site_description" class="form-control" rows="10"
-                                                placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cumque eius ipsam earum voluptatibus. Pariatur, corrupti possimus. Est reiciendis nostrum nobis at asperiores dolor, alias atque aspernatur similique animi voluptate.">
-                                            </textarea>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-save">Kaydet</button>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab_1">
+                                    <p>
+                                        <textarea class="form-control textarea_ckeditor "
+                                            name="content" id="ckeditor1">
+                                        </textarea>
+                                    </p>
+                                    <a href="#" type="submit" class="btn btn-primary btn-save">Kaydet</a>
                                 </div>
-                            </form>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="tab_2">
+                                    <p>
+                                        <textarea class="form-control textarea_ckeditor "
+                                            name="content" id="ckeditor2">
+                                        </textarea>
+                                    </p>
+                                    <a href="#" type="submit" class="btn btn-primary btn-save">Kaydet</a>
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="tab_3">
+                                    <p>
+                                        <textarea class="form-control textarea_ckeditor "
+                                            name="content" id="ckeditor3">
+                                        </textarea>
+                                    </p>
+                                    <a href="#" type="submit" class="btn btn-primary btn-save">Kaydet</a>
+                                </div>
+                                <!-- /.tab-pane -->
+                            </div>
+                            <!-- /.tab-content -->
                         </div><!-- /.card-body -->
                     </div>
-                </div><!-- /.col-md-12 col-12 -->
-                <div class="col-md-12 col-12">
-                    <div class="card card-dark collapsed-card">
-                        <div class="card-header">
-                            <h3 class="card-title">Misyonumuz</h3>
-
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row">
-                                    <div class="col-sm-12 col-12">
-                                        <div class="form-group">
-                                            <label>Konu içeriği</label>
-                                            <textarea name="site_description" class="form-control" rows="10"
-                                                placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cumque eius ipsam earum voluptatibus. Pariatur, corrupti possimus. Est reiciendis nostrum nobis at asperiores dolor, alias atque aspernatur similique animi voluptate.">
-                                            </textarea>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-save">Kaydet</button>
-                                </div>
-                            </form>
-                        </div><!-- /.card-body -->
-                    </div>
-                </div><!-- /.col-md-12 col-12 -->
-                <div class="col-md-12 col-12">
-                    <div class="card card-info collapsed-card">
-                        <div class="card-header">
-                            <h3 class="card-title">Vizyonumuz</h3>
-
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row">
-                                    <div class="col-sm-12 col-12">
-                                        <div class="form-group">
-                                            <label>Konu içeriği</label>
-                                            <textarea name="site_description" class="form-control" rows="10"
-                                                placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cumque eius ipsam earum voluptatibus. Pariatur, corrupti possimus. Est reiciendis nostrum nobis at asperiores dolor, alias atque aspernatur similique animi voluptate.">
-                                            </textarea>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-save">Kaydet</button>
-                                </div>
-                            </form>
-                        </div><!-- /.card-body -->
-                    </div>
-                </div><!-- /.col-md-12 col-12 -->
-            </div><!-- /.row -->
+                    <!-- ./card -->
+                </div>
+                <!-- /.col -->
+            </div>
         </div><!-- /.container-fluid -->
     </section><!-- /.content -->
 </div>
 
 
+@endsection
+
+@section('footer')
+<script src="{{ asset('js/admin/ckeditor/ckeditor.js') }}"></script>
+<script src="{{ asset('js/admin/select2.min.js') }}"></script>
+<script>
+    $(document).ready(function(){
+        // select1
+        $('.select2').select2();
+
+        // ckeditor
+        CKEDITOR.replace( 'ckeditor1' );
+    })
+</script>
+<script>
+    $(document).ready(function(){
+        // select2
+        $('.select2').select2();
+
+        // ckeditor
+        CKEDITOR.replace( 'ckeditor2' );
+    })
+</script>
+<script>
+    $(document).ready(function(){
+        // select3
+        $('.select2').select2();
+
+        // ckeditor
+        CKEDITOR.replace( 'ckeditor3' );
+    })
+</script>
 @endsection
