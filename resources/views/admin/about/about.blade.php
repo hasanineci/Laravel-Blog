@@ -26,55 +26,51 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <!-- Custom Tabs -->
-                    <div class="card">
-                        <div class="card-header d-flex p-0">
-                            <h3 class="card-title p-3">Hakkımızda</h3>
-                            <ul class="nav nav-pills ml-auto p-2">
-                                <li class="nav-item"><a class="nav-link active" href="#tab_1"
-                                        data-toggle="tab">Hakkımızda</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab">Misyonumuz</a>
+
+                    <div class="card card-primary card-outline card-outline-tabs">
+                        <div class="card-header p-0 border-bottom-0">
+                            <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill"
+                                        href="#custom-tabs-four-hakkimizda" role="tab" aria-controls="custom-tabs-four-home"
+                                        aria-selected="true">Hakkımızda</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="#tab_3" data-toggle="tab">Vizyonumuz</a>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill"
+                                        href="#custom-tabs-four-profile" role="tab"
+                                        aria-controls="custom-tabs-four-misyonumuz" aria-selected="false">Misyonumuz</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-four-messages-tab" data-toggle="pill"
+                                        href="#custom-tabs-four-messages" role="tab"
+                                        aria-controls="custom-tabs-four-vizyonumuz" aria-selected="false">Vizyonumuz</a>
                                 </li>
                             </ul>
-                        </div><!-- /.card-header -->
+                        </div>
                         <div class="card-body">
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="tab_1">
-                                    <p>
-                                        <textarea class="form-control textarea_ckeditor "
-                                            name="content" id="ckeditor1">
-                                        </textarea>
-                                    </p>
-                                    <a href="#" type="submit" class="btn btn-primary btn-save">Kaydet</a>
+                            <div class="tab-content" id="custom-tabs-four-tabContent">
+                                <div class="tab-pane fade active show" id="custom-tabs-four-hakkimizda" role="tabpanel"
+                                    aria-labelledby="custom-tabs-four-home-tab">
+                                    <textarea class="form-control textarea_ckeditor " name="content" id="ckeditor1">
+                                    </textarea>
+                                    <a href="#" type="submit" class="btn btn-primary btn-save mt-3">Kaydet</a>
                                 </div>
-                                <!-- /.tab-pane -->
-                                <div class="tab-pane" id="tab_2">
-                                    <p>
-                                        <textarea class="form-control textarea_ckeditor "
-                                            name="content" id="ckeditor2">
-                                        </textarea>
-                                    </p>
-                                    <a href="#" type="submit" class="btn btn-primary btn-save">Kaydet</a>
+                                <div class="tab-pane fade" id="custom-tabs-four-misyonumuz" role="tabpanel"
+                                    aria-labelledby="custom-tabs-four-profile-tab">
+                                    <textarea class="form-control textarea_ckeditor " name="content" id="ckeditor2">
+                                    </textarea>
+                                    <a href="#" type="submit" class="btn btn-primary btn-save mt-3">Kaydet</a>
                                 </div>
-                                <!-- /.tab-pane -->
-                                <div class="tab-pane" id="tab_3">
-                                    <p>
-                                        <textarea class="form-control textarea_ckeditor "
-                                            name="content" id="ckeditor3">
-                                        </textarea>
-                                    </p>
-                                    <a href="#" type="submit" class="btn btn-primary btn-save">Kaydet</a>
+                                <div class="tab-pane fade" id="custom-tabs-four-vizyonumuz" role="tabpanel"
+                                    aria-labelledby="custom-tabs-four-messages-tab">
+                                    <textarea class="form-control textarea_ckeditor " name="content" id="ckeditor3">
+                                    </textarea>
+                                    <a href="#" type="submit" class="btn btn-primary btn-save mt-3">Kaydet</a>
                                 </div>
-                                <!-- /.tab-pane -->
                             </div>
-                            <!-- /.tab-content -->
-                        </div><!-- /.card-body -->
+                        </div><!-- /.card -->
                     </div>
-                    <!-- ./card -->
-                </div>
-                <!-- /.col -->
+                </div><!-- /.col -->
             </div>
         </div><!-- /.container-fluid -->
     </section><!-- /.content -->

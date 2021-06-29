@@ -32,10 +32,10 @@
             <div class="card-header">
                 <h3 class="card-title">Kategoriler</h3>
                 <div class="card-tools">
-                    <a href="{{ url('admin/yeni-kategori') }}" type="button" class="btn btn-success" >
-                      Yeni Kategori
+                    <a href="{{ url('admin/yeni-kategori') }}" type="button" class="btn btn-success">
+                        Yeni Kategori
                     </a>
-                  </div>
+                </div>
             </div>
             <div class="card-body p-0">
                 <table class="table table-striped projects">
@@ -53,137 +53,39 @@
                             <th style="width: 8%" class="text-center">
                                 Durumu
                             </th>
-                            <th style="width: 20%">
+                            <th style="width: 20%" class="text-center">
+                                Araçlar
                             </th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($kategori as $kategori)
                         <tr>
                             <td>
                                 #
                             </td>
                             <td>
-                                <a>
-                                    Anasayfa
-                                </a>
+                                <a style="text-transform: capitalize;"> {{ $kategori->name }} </a>
                                 <br />
-                                <small>
-                                    Oluşturuldu 01.06.2021
-                                </small>
+                                <small> Oluşturuldu {{ $kategori->updated_at->format('d.m.Y') }} </small>
                             </td>
-                            <td>
+                            <td class="pl-4">
                                 <img alt="Avatar" class="table-avatar" src="{{ asset('dist/img/user.jpg') }}">
                             </td>
                             <td class="project-state">
-                                <span class="badge badge-success">Yayınlandı</span>
+                                <span class="badge badge-success"> {{ $kategori->status }} </span>
                             </td>
-                            <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="#">
-                                    <i class="fas fa-pencil-alt">
-                                    </i>
-                                    Düzenle
-                                </a>
-                                <a class="btn btn-danger btn-sm" href="#">
-                                    <i class="fas fa-trash">
-                                    </i>
-                                    Sil
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                #
-                            </td>
-                            <td>
-                                <a>
-                                    Hakkımda
-                                </a>
-                                <br />
-                                <small>
-                                    Oluşturuldu 01.06.2021
-                                </small>
-                            </td>
-                            <td>
-                                <img alt="Avatar" class="table-avatar" src="{{ asset('dist/img/user.jpg') }}">
-                            </td>
-                            <td class="project-state">
-                                <span class="badge badge-success">Yayınlandı</span>
-                            </td>
-                            <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="#">
-                                    <i class="fas fa-pencil-alt">
-                                    </i>
-                                    Düzenle
-                                </a>
-                                <a class="btn btn-danger btn-sm" href="#">
-                                    <i class="fas fa-trash">
-                                    </i>
-                                    Sil
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                #
-                            </td>
-                            <td>
-                                <a>
-                                    Blog
-                                </a>
-                                <br />
-                                <small>
-                                    Oluşturuldu 01.06.2021
-                                </small>
-                            </td>
-                            <td>
-                                <img alt="Avatar" class="table-avatar" src="{{ asset('dist/img/user.jpg') }}">
-                            </td>
-                            <td class="project-state">
-                                <span class="badge badge-success">Yayınlandı</span>
-                            </td>
-                            <td class="project-actions text-right">
+                            <td class="project-actions text-center">
                                 <a class="btn btn-info btn-sm" href="#">
                                     <i class="fas fa-pencil-alt"></i>
-                                    Düzenle
                                 </a>
                                 <a class="btn btn-danger btn-sm" href="#">
                                     <i class="fas fa-trash"></i>
-                                    Sil
                                 </a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                #
-                            </td>
-                            <td>
-                                <a>
-                                    İletişim
-                                </a>
-                                <br />
-                                <small>
-                                    Oluşturuldu 01.06.2021
-                                </small>
-                            </td>
-                            <td>
-                                <img alt="Avatar" class="table-avatar" src="{{ asset('dist/img/user.jpg') }}">
-                            </td>
-                            <td class="project-state">
-                                <span class="badge badge-success">Yayınlandı</span>
-                            </td>
-                            <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="#">
-                                    <i class="fas fa-pencil-alt">
-                                    </i>
-                                    Düzenle
-                                </a>
-                                <a class="btn btn-danger btn-sm" href="#">
-                                    <i class="fas fa-trash">
-                                    </i>
-                                    Sil
-                                </a>
-                            </td>
-                        </tr>
+                        @endforeach
+
                     </tbody>
                 </table>
             </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminAboutController;
 use App\Http\Controllers\admin\AdminIndexController;
+use App\Http\Controllers\admin\AdminNewController;
 use App\Http\Controllers\admin\BlogSettingsController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\ContactController as AdminContactController;
@@ -49,3 +50,4 @@ Route::get('admin/kullanicilar',[UsersController::class, 'users_GET']);
 Route::get('admin/blog-ayarlari',[BlogSettingsController::class, 'blog_settings_GET']);
 Route::get('admin/iletisim', [AdminContactController::class, 'contact_GET']);
 Route::get('admin/hakkimizda', [AdminAboutController::class, 'admin_about_GET']);
+Route::get('admin/yeni-kategori', [AdminNewController::class, 'admin_new_kategori_GET']);
