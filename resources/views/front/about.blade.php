@@ -24,11 +24,8 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
 
                 @foreach ($about as $about)
-
                 <h3>{{ $about->title }}</h3>
-                <p>
-                    {{ $about->content }}
-                </p>
+                {!! $about->content !!}
                 @endforeach
             </div>
         </div>

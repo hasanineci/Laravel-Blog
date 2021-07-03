@@ -5,38 +5,37 @@
 
 @section('content')
 
-
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Yeni Gönderi Oluştur</h1>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ url('admin') }}">Anasayfa</a></li>
-                        <li class="breadcrumb-item active">Yeni Post</li>
-                    </ol>
-                </div>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Yeni Gönderi Oluştur</h1>
             </div>
-        </div><!-- /.container-fluid -->
-    </section>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="{{ url('admin') }}">Anasayfa</a></li>
+                    <li class="breadcrumb-item active">Yeni Post</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-            <div class="col-md-12">
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="card card-outline card-success">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-6 col-12">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Post Başlık</label>
-                                    <input type="name" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Blog Başlık">
+                                    <input type="name" class="form-control" name="title" id="exampleInputPassword1"
+                                        placeholder="Blog Başlık" value="{{ old('title') ?? '' }}">
                                 </div>
                             </div>
                             <div class="col-sm-6 col-12">
@@ -44,7 +43,8 @@
                                     <label for="exampleInputFile">Resim Yükle</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                                            <input type="file" class="custom-file-input" name="image"
+                                                id="exampleInputFile">
                                             <label class="custom-file-label" for="exampleInputFile">Dosya formatı
                                                 jpg</label>
                                         </div>
@@ -57,9 +57,8 @@
                             <div class="col-sm-12 col-12">
                                 <div class="form-group">
                                     <label>Post Kısa Açıklama</label>
-                                    <textarea name="site_description" id="site_description" class="form-control"
-                                        rows="3" maxlength="60">
-                                    </textarea>
+                                    <textarea name="description" id="description" class="form-control" rows="3"
+                                        maxlength="60">{{ old('description') ?? '' }}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -71,16 +70,15 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-6 p-3">
-                            <button type="button" class="btn btn-block btn-success btn-lg"
+                            <button type="submit" class="btn btn-block btn-success btn-lg"
                                 style="width: 100px;">Kaydet</button>
                         </div>
                     </div>
                 </div>
-            </div><!-- /.col-->
-        </div>
-    </section><!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
+            </form>
+        </div><!-- /.col-->
+    </div>
+</section><!-- /.content -->
 
 @endsection
 @section('footer')

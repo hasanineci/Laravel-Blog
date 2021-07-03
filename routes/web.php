@@ -46,6 +46,7 @@ Route::get('/admin', [AdminIndexController::class, 'index']);
 
 //post
 Route::get('admin/new-post', [NewPostController::class, 'new_post_Get']);
+Route::post('admin/new-post', [NewPostController::class, 'new_POST']);
 Route::get('admin/posts', [PostCategoriesController::class, 'postCategories_Get']);
 
 //profil
@@ -68,3 +69,4 @@ Route::post('admin/iletisim', [AdminContactController::class, 'contact_POST']);
 
 //hakkımızda
 Route::get('admin/hakkimizda', [AdminAboutController::class, 'admin_about_GET']);
+Route::post('admin/hakkimizda', [AdminAboutController::class, 'admin_about_POST']);
