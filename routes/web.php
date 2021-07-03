@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\admin\AdminAboutController;
 use App\Http\Controllers\admin\AdminIndexController;
+use App\Http\Controllers\admin\AdminLoginController;
 use App\Http\Controllers\admin\AdminNewController;
+use App\Http\Controllers\admin\AdminRegisterController;
 use App\Http\Controllers\admin\BlogSettingsController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\ContactController as AdminContactController;
@@ -70,3 +72,7 @@ Route::post('admin/iletisim', [AdminContactController::class, 'contact_POST']);
 //hakkımızda
 Route::get('admin/hakkimizda', [AdminAboutController::class, 'admin_about_GET']);
 Route::post('admin/hakkimizda', [AdminAboutController::class, 'admin_about_POST']);
+
+//login
+Route::get('login', [AdminLoginController::class, 'admin_login_GET'] );
+Route::get('kayit-ol', [AdminRegisterController::class, 'admin_register_GET'] );
