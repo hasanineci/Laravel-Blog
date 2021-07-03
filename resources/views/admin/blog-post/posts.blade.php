@@ -40,23 +40,15 @@
                                     <span class="username">
                                         <a href="#">{{ $post->title }}</a>
                                     </span>
-                                    <span class="description">herkese Açık Olarak Paylaşıldı -
-                                        {{ $post->created_at }}</span>
+                                    <span class="description">herkese Açık Olarak Paylaşıldı - {{ $post->created_at }}</span>
+                                    <span class="description">{{ $post->status }}</span>
                                 </div>
                                 <p>
                                     {!! $post->content !!}
                                 </p>
 
-                                <p>
-                                    <a class="btn btn-primary btn-sm" href="#">
-                                        <i class="fas fa-folder-open"></i>
-                                        Gözat
-                                    </a>
-                                    <a class="btn btn-dark btn-sm" href="#">
-                                        <i class="fas fa-exclamation-triangle"></i>
-                                        Pasif Et
-                                    </a>
-                                    <a class="btn btn-success btn-sm" href="#">
+                                <p class="text-right">
+                                    <a class="btn btn-primary btn-sm" href="{{ url('admin/posts/detail/'.$post->id) }}">
                                         <i class="fas fa-pencil-alt"></i>
                                         Düzenle
                                     </a>

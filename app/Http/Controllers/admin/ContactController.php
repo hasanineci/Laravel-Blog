@@ -19,7 +19,7 @@ class ContactController extends Controller
         $validated = $request->validate([
             "email" => "required|max:255",
             "phone" => "required|max:255",
-            "fax" => "required|max:255",
+            "fax" => "max:255",
             "whatsapp_phone" => 'max:255',
             "address" => "required|max:255",
         ]);

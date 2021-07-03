@@ -28,7 +28,7 @@
                 </a>
                 <p class="post-meta">
                     Posted by
-                    <a href="#!">{{ env('APP_NAME') }}</a>
+                    <a href="#!">{{ $post->user->name }}</a>
                     on {{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y H:i:s') }}
                 </p>
             </div>

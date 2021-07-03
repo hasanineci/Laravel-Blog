@@ -44,35 +44,42 @@ Route::get('blog', [PostController::class, 'post_Get']);
  * Admin Routes
  */
 
-Route::get('/admin', [AdminIndexController::class, 'index']);
-
-//post
-Route::get('admin/new-post', [NewPostController::class, 'new_post_Get']);
-Route::post('admin/new-post', [NewPostController::class, 'new_POST']);
-Route::get('admin/posts', [PostCategoriesController::class, 'postCategories_Get']);
-
-//profil
-Route::get('admin/profil',[ProfilController::class, 'profil_GET']);
-
-//kategoriler
-Route::get('admin/kategoriler',[CategoryController::class, 'category_GET']);
-Route::get('admin/yeni-kategori', [AdminNewController::class, 'admin_new_kategori_GET']);
-
-//Kullanıcılar
-Route::get('admin/kullanicilar',[UsersController::class, 'users_GET']);
-Route::get('admin/yeni-Kullanici',[NewUserController::class, 'new_user_GET']);
-
-//blog ayarları
-Route::get('admin/blog-ayarlari',[BlogSettingsController::class, 'blog_settings_GET']);
-
-//iletişim
-Route::get('admin/iletisim', [AdminContactController::class, 'contact_GET']);
-Route::post('admin/iletisim', [AdminContactController::class, 'contact_POST']);
-
-//hakkımızda
-Route::get('admin/hakkimizda', [AdminAboutController::class, 'admin_about_GET']);
-Route::post('admin/hakkimizda', [AdminAboutController::class, 'admin_about_POST']);
-
+    
 //login
-Route::get('login', [AdminLoginController::class, 'admin_login_GET'] );
-Route::get('kayit-ol', [AdminRegisterController::class, 'admin_register_GET'] );
+Route::get('login', [AdminLoginController::class, 'admin_login_GET'] )->name('login');
+Route::post('login', [AdminLoginController::class, 'admin_login_POST'] );
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/admin', [AdminIndexController::class, 'index']);
+    
+    //post
+    Route::get('admin/new-post', [NewPostController::class, 'new_post_Get']);
+    Route::post('admin/new-post', [NewPostController::class, 'new_POST']);
+    Route::get('admin/posts', [PostCategoriesController::class, 'postCategories_Get']);
+    Route::get('admin/posts/detail/{id?}', [PostCategoriesController::class, 'post_detail_GET']);
+    Route::post('admin/posts/detail/{id?}', [PostCategoriesController::class, 'post_detail_POST']);
+    
+    //profil
+    Route::get('admin/profil',[ProfilController::class, 'profil_GET']);
+    
+    //kategoriler
+    Route::get('admin/kategoriler',[CategoryController::class, 'category_GET']);
+    Route::get('admin/yeni-kategori', [AdminNewController::class, 'admin_new_kategori_GET']);
+    
+    //Kullanıcılar
+    Route::get('admin/kullanicilar',[UsersController::class, 'users_GET']);
+    Route::get('admin/yeni-Kullanici',[NewUserController::class, 'new_user_GET']);
+    
+    //blog ayarları
+    Route::get('admin/blog-ayarlari',[BlogSettingsController::class, 'blog_settings_GET']);
+    
+    //iletişim
+    Route::get('admin/iletisim', [AdminContactController::class, 'contact_GET']);
+    Route::post('admin/iletisim', [AdminContactController::class, 'contact_POST']);
+    
+    //hakkımızda
+    Route::get('admin/hakkimizda', [AdminAboutController::class, 'admin_about_GET']);
+    Route::post('admin/hakkimizda', [AdminAboutController::class, 'admin_about_POST']);
+
+    Route::get('logout', [AdminLoginController::class, 'logout']);
+});

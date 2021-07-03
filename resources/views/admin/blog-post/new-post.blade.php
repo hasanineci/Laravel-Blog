@@ -10,12 +10,20 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
+                @if ( isset($post) && $post != null )
+                <h1>Gönderi Düzenle</h1>
+                @else
                 <h1>Yeni Gönderi Oluştur</h1>
+                @endif
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ url('admin') }}">Anasayfa</a></li>
+                    @if ( isset($post) && $post != null )
+                    <li class="breadcrumb-item active">{{ $post->title }}</li>
+                    @else
                     <li class="breadcrumb-item active">Yeni Post</li>
+                    @endif
                 </ol>
             </div>
         </div>
@@ -35,7 +43,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Post Başlık</label>
                                     <input type="name" class="form-control" name="title" id="exampleInputPassword1"
-                                        placeholder="Blog Başlık" value="{{ old('title') ?? '' }}">
+                                        placeholder="Blog Başlık" value="{{ old('title') ?? $post->title ?? '' }}">
                                 </div>
                             </div>
                             <div class="col-sm-6 col-12">
@@ -58,15 +66,27 @@
                                 <div class="form-group">
                                     <label>Post Kısa Açıklama</label>
                                     <textarea name="description" id="description" class="form-control" rows="3"
-                                        maxlength="60">{{ old('description') ?? '' }}</textarea>
+                                        maxlength="60">{{ old('description') ?? $post->description ?? '' }}</textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
+                        <label for="ckeditor1">İçerik</label>
                         <textarea class="form-control textarea_ckeditor @error('content') is-invalid @enderror"
-                            name="content" id="ckeditor1">{{ old('content') ?? '' }}</textarea>
+                            name="content" id="ckeditor1">{{ old('content') ?? $post->content ?? '' }}</textarea>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="status">Durum</label>
+                            <select name="status" id="status" class="form-control @error('status') is-invalid @enderror">
+                                <option value="pending" @if(isset($post) && $post->status == 'pending') selected @endif>Onay Bekliyor</option>
+                                <option value="active" @if(isset($post) && $post->status == 'active') selected @endif>Aktif</option>
+                                <option value="passive" @if(isset($post) && $post->status == 'passive') selected @endif>Pasif</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-6 p-3">

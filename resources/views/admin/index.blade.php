@@ -180,7 +180,7 @@
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                         <img src="{{ asset('dist/img/user.jpg')}}" class="user-image img-circle elevation-2"
                             alt="User Image">
-                        <span class="d-none d-md-inline" style="text-transform: capitalize;">Hasan İNECİ</span>
+                        <span class="d-none d-md-inline" style="text-transform: capitalize;">{{ Auth::user()->name }}</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                         <!-- User image -->
@@ -188,14 +188,14 @@
                             <img src="{{ asset('dist/img/user.jpg')}}" class="img-circle elevation-2" alt="User Image">
 
                             <p style="text-transform: capitalize;">
-                                Hasan İNECİ - Bilgisayar Mühendisi
-                                <small>0541 514 85 15</small>
+                                {{ Auth::user()->name }} - {{ Auth::user()->jobs }}
+                                <small>{{ Auth::user()->phone }}</small>
                             </p>
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <a href="{{ url('admin/profil') }}" class="btn btn-default btn-flat">Profil</a>
-                            <a href="{{ url('') }}" class="btn btn-default btn-flat float-right">Oturumu Kapat</a>
+                            <a href="{{ url('logout') }}" class="btn btn-default btn-flat float-right">Oturumu Kapat</a>
                         </li>
                     </ul>
                 </li>

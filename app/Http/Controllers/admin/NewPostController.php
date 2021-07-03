@@ -27,7 +27,7 @@ class NewPostController extends Controller
         $new->url = Str::slug($request->title);
         $new->description = $request->description;
         $new->content = $request->content;
-        $new->user_id = Auth::user()->id ?? 1;
+        $new->user_id = Auth::user()->id;
         $new->save();
 
         return redirect()->back()->with('success', 'İşlem başarılı, yeni blog yazısı paylaşıldı.');
