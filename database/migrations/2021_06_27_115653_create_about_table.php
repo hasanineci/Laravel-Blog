@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateAboutTable extends Migration
@@ -19,6 +20,27 @@ class CreateAboutTable extends Migration
             $table->longText('content');
             $table->timestamps();
         });
+
+        $add = DB::table('about')->insert([
+            "title" => "Hakkımızda",
+            "content" => "hakkımızda içerik",
+            "created_at" => date('Y-m-d H:i:s'),
+            "updated_at" => date('Y-m-d H:i:s')
+        ]);
+
+        $add = DB::table('about')->insert([
+            "title" => "Vizyon",
+            "content" => "vizyon içerik",
+            "created_at" => date('Y-m-d H:i:s'),
+            "updated_at" => date('Y-m-d H:i:s')
+        ]);
+
+        $add = DB::table('about')->insert([
+            "title" => "Misyon",
+            "content" => "misyon içerik",
+            "created_at" => date('Y-m-d H:i:s'),
+            "updated_at" => date('Y-m-d H:i:s')
+        ]);
     }
 
     /**

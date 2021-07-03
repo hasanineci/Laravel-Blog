@@ -38,6 +38,7 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('hakkimizda', [AboutController::class, 'about_Get']);
 Route::get('iletisim', [ContactController::class, 'contact_Get']);
 Route::get('blog', [PostController::class, 'post_Get']);
+Route::get('post/{url?}', [PostController::class, 'post_detail_GET']);
 
 
 /**

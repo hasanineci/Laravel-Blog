@@ -22,14 +22,14 @@
             @foreach ($posts as $post)
             <!-- Post preview-->
             <div class="post-preview">
-                <a href="{{ url($post->url) }}">
+                <a href="{{ url('post/'.$post->url) }}">
                     <h2 class="post-title">{{ $post->title }}</h2>
                     <h3 class="post-subtitle">{{ $post->description }}</h3>
                 </a>
                 <p class="post-meta">
-                    Posted by
-                    <a href="#!">{{ $post->user->name }}</a>
-                    on {{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y H:i:s') }}
+                    Bu gönderi 
+                    <a href="#!">{{ $post->user->name }}</a> adlı kişi tarafından
+                    {{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y H:i:s') }} tarihte paylaşıldı.
                 </p>
             </div>
             <!-- Divider-->

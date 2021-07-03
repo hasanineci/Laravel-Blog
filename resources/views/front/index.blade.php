@@ -38,7 +38,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                    @foreach ($kategori as $kategori)
+                    @foreach (menuList() as $kategori)
                     <li class="nav-item">
                         <a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ $kategori->url }}">{{ $kategori->name }}</a>
                     </li>
