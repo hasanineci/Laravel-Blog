@@ -12,6 +12,6 @@ class IndexController extends Controller
     {
         $posts = Posts::orderBy('created_at', 'DESC')->where('status', 'active')->paginate(10);
         $kategori =kategori::get();
-        return view('front.homepage', compact('posts'), compact('kategori'));
+        return view('front.homepage', compact('posts', 'kategori'));
     }
 }

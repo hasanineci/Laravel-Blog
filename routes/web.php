@@ -7,6 +7,7 @@ use App\Http\Controllers\admin\BlogSettingsController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\ContactController as AdminContactController;
 use App\Http\Controllers\admin\NewPostController;
+use App\Http\Controllers\admin\NewUserController;
 use App\Http\Controllers\admin\PostCategoriesController;
 use App\Http\Controllers\admin\ProfilController;
 use App\Http\Controllers\admin\UsersController;
@@ -42,12 +43,28 @@ Route::get('blog', [PostController::class, 'post_Get']);
  */
 
 Route::get('/admin', [AdminIndexController::class, 'index']);
+
+//post
 Route::get('admin/new-post', [NewPostController::class, 'new_post_Get']);
 Route::get('admin/posts', [PostCategoriesController::class, 'postCategories_Get']);
+
+//profil
 Route::get('admin/profil',[ProfilController::class, 'profil_GET']);
+
+//kategoriler
 Route::get('admin/kategoriler',[CategoryController::class, 'category_GET']);
-Route::get('admin/kullanicilar',[UsersController::class, 'users_GET']);
-Route::get('admin/blog-ayarlari',[BlogSettingsController::class, 'blog_settings_GET']);
-Route::get('admin/iletisim', [AdminContactController::class, 'contact_GET']);
-Route::get('admin/hakkimizda', [AdminAboutController::class, 'admin_about_GET']);
 Route::get('admin/yeni-kategori', [AdminNewController::class, 'admin_new_kategori_GET']);
+
+//Kullanıcılar
+Route::get('admin/kullanicilar',[UsersController::class, 'users_GET']);
+Route::get('admin/yeni-Kullanici',[NewUserController::class, 'new_user_GET']);
+
+//blog ayarları
+Route::get('admin/blog-ayarlari',[BlogSettingsController::class, 'blog_settings_GET']);
+
+//iletişim
+Route::get('admin/iletisim', [AdminContactController::class, 'contact_GET']);
+Route::post('admin/iletisim', [AdminContactController::class, 'contact_POST']);
+
+//hakkımızda
+Route::get('admin/hakkimizda', [AdminAboutController::class, 'admin_about_GET']);

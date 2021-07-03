@@ -45,7 +45,8 @@
                                         <span class="username">
                                             <a href="#">{{ $post->title }}</a>
                                         </span>
-                                        <span class="description">herkese Açık Olarak Paylaşıldı - {{ $post->created_at }}</span>
+                                        <span class="description">herkese Açık Olarak Paylaşıldı -
+                                            {{ $post->created_at }}</span>
                                     </div>
                                     <p>
                                         {!! $post->content !!}
@@ -71,6 +72,10 @@
                                     </p>
                                 </div>
                                 @endforeach
+
+                                <div class="d-flex justify-content-end mb-4">
+                                    {{ $posts->links() }}
+                                </div>
 
                             </div>
                         </div>

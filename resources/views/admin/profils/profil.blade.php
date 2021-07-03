@@ -93,7 +93,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-md-9">
-                    <div class="card">
+                    <div class="card card-primary card-outline">
                         <div class="card-body pt-5">
                             <div class="tab-content">
                                 <form class="form-horizontal">

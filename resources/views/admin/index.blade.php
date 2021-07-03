@@ -194,7 +194,7 @@
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
-                            <a href="{{ url('profil') }}" class="btn btn-default btn-flat">Profil</a>
+                            <a href="{{ url('admin/profil') }}" class="btn btn-default btn-flat">Profil</a>
                             <a href="{{ url('') }}" class="btn btn-default btn-flat float-right">Oturumu Kapat</a>
                         </li>
                     </ul>

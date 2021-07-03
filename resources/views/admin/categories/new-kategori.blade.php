@@ -37,14 +37,20 @@
                                             <div class="form-group">
                                                 <label>Kategori Adı</label>
                                                 <input type="text" class="form-control" placeholder="" maxlength="60">
-                                                <small style="color: #778899;">örnek: örnek sayfa , örnek</small>
+                                                <small style="color: #778899;">
+                                                    Türkçe karakterler olabilir, cümleler arası boşluk olabilir.<br>
+                                                    örnek: örnek sayfa , örnek
+                                                </small>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-12">
                                             <div class="form-group">
                                                 <label>Kategori Linki</label>
                                                 <input type="text" class="form-control" placeholder="" maxlength="60">
-                                                <small style="color: #778899;">örnek: ornek-sayfa , ornek</small>
+                                                <small style="color: #778899;">
+                                                    Türkçe  karakterler olamaz, cümleler arası boşluk olmaz &quot; - &quot; konulmalı. <br>
+                                                    örnek: ornek-sayfa , ornek
+                                                </small>
                                             </div>
                                         </div>
                                     </div>

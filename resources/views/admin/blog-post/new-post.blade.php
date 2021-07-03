@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Başlık</label>
+                                    <label for="exampleInputPassword1">Post Başlık</label>
                                     <input type="name" class="form-control" id="exampleInputPassword1"
                                         placeholder="Blog Başlık">
                                 </div>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="col-sm-12 col-12">
                                 <div class="form-group">
-                                    <label>Site Kısa Açıklama</label>
+                                    <label>Post Kısa Açıklama</label>
                                     <textarea name="site_description" id="site_description" class="form-control"
                                         rows="3" maxlength="60">
                                     </textarea>
@@ -76,11 +76,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- /.col-->
+            </div><!-- /.col-->
         </div>
-    </section>
-    <!-- /.content -->
+    </section><!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
 

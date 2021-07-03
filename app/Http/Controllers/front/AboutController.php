@@ -12,6 +12,6 @@ class AboutController extends Controller
     {
         $about = About::get();
         $kategori =kategori::get();
-        return view('front.about', compact('about'), compact('kategori'));
+        return view('front.about', compact('about', 'kategori'));
     }
 }
