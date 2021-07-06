@@ -79,7 +79,7 @@
                                     href="{{ url('admin/users/detail/'.$user->id) }}"><i
                                         class="fas fa-pencil-alt"></i>&nbsp; Düzenle
                                 </a>
-                                <button type="button" class="btn btn-danger btndelete" style="width: 85px;"
+                                <button type="button" class="btn btn-danger btndelete" style="width: 85px;" data-name="{{ $user->name }}"
                                     data-id="{{ $user->id }}"><i class="fas fa-trash"></i> &nbsp; Sil
                                 </button>
                             </div>
@@ -97,68 +97,51 @@
 
 @section('footer')
 <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-     $.ajaxSetup({
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            }
-                        });
-    /*
+    
     $(function () {
         $('#listUser').on('click', '.btndelete', function () {
             var id = $(this).data('id');
+            var name = $(this).data('name');
             $.ajaxSetup({
-                headers: {
+                headers:
+                {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            $.ajax({
-                url: "users/delete/"+id,
-                type: "POST"
-            });
-        });
-    });*/
-
-    $('#listUser').on('clik', '.btndelete', function() {
-        var id =$(this).data('id');
-        var url = "users/delete"+id;
-        $.confirm({
-            title: "Emin misiniz?",
-            content: "Bu kullanıcıyı kalıcı olarak silmek istiyormusunuz?",
-            icon: "warning",
-            type: "red",
-            typeAnimated: true,
-            buttons: {
-                areYouSure:{
-                    text: 'Evet, Sil',
-                    btnClass: 'btn-red',
-                    draggable:  true,
-                    action: function(){
-                       
-                        $.ajax({
-                            url: "users/delete/"+id,
-                            type: "POST"
-                        });
-
-                        // Jquery Confirm Success
-                        $.alert({
-                            title: 'İşlem Başarılı',
-                            content: 'Silme işlemi başarılı bir şekilde tamamlandı.',
-                            type: 'green',
-                            typeAnimated: true,
-                        });
-
-                    }
-                }
-            },
-            
-            close: {
-                                text: 'Hayır, Silme',
-                                action: function () { }
+            Swal.fire({
+                title: 'Kullanıcıyı kalıcı olarak silmek istediğinizden emin misiniz?',
+                text: 'Bu işlem geri alınamaz',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Evet, Sil!',
+                cancelButtonText: 'İptal',
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                    'Silindi!',
+                    name+' Kullanıcısı silindi.',
+                    'success'
+                    )
+                    $.ajax({
+                        url: "users/delete/"+id,
+                        type: "POST",
+                        success: function(data){
+                            if(data == true)
+                            {
+                                setTimeout(() => window.location.reload(false), 3000);
                             }
+                        }
+                    });
+                }
+            })
         });
     });
+
+
 
 </script>
 @endsection

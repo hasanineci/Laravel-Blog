@@ -67,6 +67,6 @@ class NewUserController extends Controller
     public function delete(Request $request)
     {
         $deleted = User::where('id', $request->id)->delete();
-        return redirect()->back()->with('success', 'Kullanıcı silme başarılı.');
+        return response()->json(1);
     }
 }
