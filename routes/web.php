@@ -70,6 +70,10 @@ Route::middleware(['auth'])->group(function () {
     //Kullanıcılar
     Route::get('admin/kullanicilar',[UsersController::class, 'users_GET']);
     Route::get('admin/yeni-Kullanici',[NewUserController::class, 'new_user_GET']);
+    Route::post('admin/yeni-Kullanici',[NewUserController::class, 'new_user_POST']);
+    Route::get('admin/users/detail/{id?}', [NewUserController::class, 'users_detail_GET'] );
+    Route::post('admin/users/detail/{id?}', [NewUserController::class, 'users_detail_POST'] );
+    Route::post('admin/users/delete/{id?}', [NewUserController::class, 'delete'] );
     
     //blog ayarları
     Route::get('admin/blog-ayarlari',[BlogSettingsController::class, 'blog_settings_GET']);

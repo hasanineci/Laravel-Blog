@@ -27,6 +27,7 @@ class NewPostController extends Controller
         $new->url = Str::slug($request->title);
         $new->description = $request->description;
         $new->content = $request->content;
+        $new->status = $request->status;
         $new->user_id = Auth::user()->id;
         $new->save();
 

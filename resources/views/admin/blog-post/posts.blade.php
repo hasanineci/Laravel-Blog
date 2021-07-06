@@ -44,7 +44,7 @@
                                     <span class="description">{{ $post->status }}</span>
                                 </div>
                                 <p>
-                                    {!! $post->content !!}
+                                    {!! $post->description !!}
                                 </p>
 
                                 <p class="text-right">

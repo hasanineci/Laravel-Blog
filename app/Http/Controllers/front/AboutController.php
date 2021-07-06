@@ -11,7 +11,6 @@ class AboutController extends Controller
     public function about_Get()
     {
         $about = About::get();
-        $kategori =kategori::get();
-        return view('front.about', compact('about', 'kategori'));
+        return view('front.about', compact('about'));
     }
 }

@@ -66,7 +66,7 @@
                                 <div class="form-group">
                                     <label>Post Kısa Açıklama</label>
                                     <textarea name="description" id="description" class="form-control" rows="3"
-                                        maxlength="60">{{ old('description') ?? $post->description ?? '' }}</textarea>
+                                        maxlength="240">{{ old('description') ?? $post->description ?? '' }}</textarea>
                                 </div>
                             </div>
                         </div>

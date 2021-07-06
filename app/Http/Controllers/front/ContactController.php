@@ -10,8 +10,7 @@ class ContactController extends Controller
 {
     public function contact_Get()
     {
-        $kategori =kategori::get();
         $contact = Contact::get();
-        return view('front.contact', compact('kategori', 'contact'));
+        return view('front.contact', compact('contact'));
     }
 }
