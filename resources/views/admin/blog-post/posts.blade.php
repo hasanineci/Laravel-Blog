@@ -29,7 +29,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12 col-12 order-2 order-md-1">
-                    <div class="row">
+                    <div class="row" id="listPost">
                         <div class="col-md-12 col-12">
 
                             @foreach ($posts as $post)
@@ -40,7 +40,7 @@
                                     <span class="username">
                                         <a href="#">{{ $post->title }}</a>
                                     </span>
-                                    <span class="description">herkese Açık Olarak Paylaşıldı - {{ $post->created_at }}</span>
+                                    <span class="description">Herkese Açık Olarak Paylaşıldı - {{ $post->created_at->format('d/m/Y H:i:s') }}</span>
                                     <span class="description">{{ $post->status }}</span>
                                 </div>
                                 <p>
@@ -52,10 +52,10 @@
                                         <i class="fas fa-pencil-alt"></i>
                                         Düzenle
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="#">
+                                    <button type="button" class="btn btn-danger btn-sm btnPostDelete" data-id="{{ $post->id }}">
                                         <i class="fas fa-trash"></i>
                                         Sil
-                                    </a>
+                                    </button>
                                 </p>
                             </div>
                             @endforeach
@@ -70,4 +70,57 @@
             </div><!-- /.card-body -->
         </div><!-- /.card -->
 </section><!-- /.content -->
+
+
+@endsection
+
+@section('footer')
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    
+    $(function () {
+        $('#listPost').on('click', '.btnPostDelete', function () {
+            var id = $(this).data('id');
+            $.ajaxSetup({  headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')   }  });
+            Swal.fire({
+                title: 'Paylaşılan gönderiyi kalıcı olarak silmek istediğinizden emin misiniz?',
+                text: 'Bu işlem geri alınamaz',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Evet, Sil!',
+                cancelButtonText: 'İptal',
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    
+                    $.ajax({
+                        url: "post/delete/"+id,
+                        type: "POST",
+                        success: function(data){
+                            
+                            if(data == true)
+                            {
+                                Swal.fire(
+                                'Silindi!',
+                                ' Gönderi silindi.',
+                                'success'
+                                )
+                                setTimeout(() => window.location.reload(false), 2000);
+                            }if(data == false)
+                            {
+                                Swal.fire(
+                                'Silinmedi!',
+                                ' Gönderi silinmedi.',
+                                'error'
+                                )
+                            }
+                        }
+                    });
+                }
+            })
+        });
+    });
+</script>
 @endsection

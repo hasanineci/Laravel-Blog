@@ -59,6 +59,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/posts', [PostCategoriesController::class, 'postCategories_Get']);
     Route::get('admin/posts/detail/{id?}', [PostCategoriesController::class, 'post_detail_GET']);
     Route::post('admin/posts/detail/{id?}', [PostCategoriesController::class, 'post_detail_POST']);
+    Route::post('admin/post/delete/{id?}', [PostCategoriesController::class, 'delete'] );
     
     //profil
     Route::get('admin/profil',[ProfilController::class, 'profil_GET']);

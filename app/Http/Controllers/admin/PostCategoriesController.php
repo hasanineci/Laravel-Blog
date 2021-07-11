@@ -13,7 +13,10 @@ class PostCategoriesController extends Controller
         $posts = Posts::orderBy('created_at', 'DESC')->paginate(10);
         return view('admin.blog-post.posts', compact('posts'));
     }
-
+    
+    /*
+    ** Post detay
+    */
     public function post_detail_GET(Request $request)
     {
         $post = Posts::where('id', $request->id)->first();
@@ -30,5 +33,14 @@ class PostCategoriesController extends Controller
         ]);
         
         return redirect()->back()->with('success', 'Güncelleme başarılı.');
+    }
+    
+    /*
+    ** Post Silme
+    */
+    public function delete(Request $request)
+    {
+        $deleted = Posts::where('id', $request->id)->delete();
+        return response()->json(1);
     }
 }

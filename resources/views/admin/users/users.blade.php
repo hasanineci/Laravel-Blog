@@ -79,8 +79,9 @@
                                     href="{{ url('admin/users/detail/'.$user->id) }}"><i
                                         class="fas fa-pencil-alt"></i>&nbsp; Düzenle
                                 </a>
-                                <button type="button" class="btn btn-danger btndelete" style="width: 85px;" data-name="{{ $user->name }}"
-                                    data-id="{{ $user->id }}"><i class="fas fa-trash"></i> &nbsp; Sil
+                                <button type="button" class="btn btn-danger btndelete" style="width: 85px;"
+                                    data-name="{{ $user->name }}" data-id="{{ $user->id }}"><i class="fas fa-trash"></i>
+                                    &nbsp; Sil
                                 </button>
                             </div>
                         </div>
@@ -96,20 +97,14 @@
 @endsection
 
 @section('footer')
-<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    
     $(function () {
         $('#listUser').on('click', '.btndelete', function () {
             var id = $(this).data('id');
             var name = $(this).data('name');
-            $.ajaxSetup({
-                headers:
-                {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
+            $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
             Swal.fire({
                 title: 'Kullanıcıyı kalıcı olarak silmek istediğinizden emin misiniz?',
                 text: 'Bu işlem geri alınamaz',
@@ -121,18 +116,28 @@
                 cancelButtonText: 'İptal',
                 }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire(
-                    'Silindi!',
-                    name+' Kullanıcısı silindi.',
-                    'success'
-                    )
+                    
                     $.ajax({
                         url: "users/delete/"+id,
                         type: "POST",
                         success: function(data){
+                            
                             if(data == true)
-                            {
-                                setTimeout(() => window.location.reload(false), 3000);
+                                {
+                                Swal.fire(
+                                'Silindi!',
+                                name+' Kullanıcısı silindi.',
+                                'success'
+                                )
+                                setTimeout(() => window.location.reload(false), 1500);
+                            }if(data == false)
+                                {
+                                Swal.fire(
+                                'Silinmedi!',
+                                name+' Kullanıcısı silinmedi.',
+                                'error'
+                                )
+                                setTimeout(() => window.location.reload(false), 2000);
                             }
                         }
                     });
@@ -140,8 +145,5 @@
             })
         });
     });
-
-
-
 </script>
 @endsection
